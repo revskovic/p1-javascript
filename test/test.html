@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winkelmandje</title>
+</head>
+<body>
+
+<script>
+  // Maak een array genaamd "winkelmandje" en plaats vijf producten erin
+  var winkelmandje = ["Bananen", "Whiskey", "Chips", "Bonen", "Aardappelen"];
+  winkelmandje[1] = "Bier";
+
+  // Functie om een product toe te voegen aan het winkelmandje
+  function addProduct(product) {
+    winkelmandje.push(product);
+    // Toon de hele array op het scherm
+    updateDisplay();
+  }
+
+  // Functie om de array op het scherm te tonen
+  function updateDisplay() {
+    // Toon het aantal producten op het scherm
+    document.body.innerHTML = "Het aantal producten in het winkelmandje is: " + winkelmandje.length;
+
+    // Voeg een lijnovergang toe
+    document.body.appendChild(document.createElement("br"));
+
+    // Toon alle producten op het scherm
+    winkelmandje.forEach(function(product) {
+      var productElement = document.createElement("div");
+      productElement.innerText = product;
+      document.body.appendChild(productElement);
+    });
+
+    // Voeg een lijnovergang toe na de weergave van alle producten
+
+    // Voeg een knop "Product Toevoegen" toe
+    var addButton = document.createElement("button");
+    addButton.innerText = "Product Toevoegen";
+    addButton.addEventListener("click", function() {
+      // Roep de functie addProduct aan wanneer de knop wordt geklikt
+      addProduct(prompt("Voer het nieuwe product in:")); // Vraag de gebruiker om een nieuw product in te voeren
+    });
+    document.body.appendChild(addButton);
+
+    // Voeg een lijnovergang toe na de knop
+    document.body.appendChild(document.createElement("br"));
+  }
+
+  // Toon het initiële winkelmandje op het scherm
+  updateDisplay();
+</script>
+
+</body>
+</html>
+
+
+
+
+
