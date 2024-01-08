@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var winkelmandjeDiv = document.getElementById("winkelmandje");
     var aantalProductenDiv = document.getElementById("aantalProducten");
 
-    // Toon het aantal producten boven de lijst
     aantalProductenDiv.textContent = "Aantal producten in het mandje: " + winkelmandjeInhoud.length;
 
     for (var i = 0; i < winkelmandjeInhoud.length; i++) {
