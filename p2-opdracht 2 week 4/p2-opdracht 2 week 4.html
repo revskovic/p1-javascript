@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tafel Generator</title>
+</head>
+<body>
+
+    <h2>Tafel Generator</h2>
+
+    <script>
+        // Functie om de tafel van een opgegeven getal te genereren en weergeven
+        function toonTafel(getal) {
+            document.write("<h3>Tafel van " + getal + "</h3>");
+            document.write("<ul>");
+
+            for (let i = 1; i <= 10; i++) {
+                let resultaat = i * getal;
+                document.write("<li>" + i + " x " + getal + " = " + resultaat + "</li>");
+            }
+
+            document.write("</ul>");
+        }
+
+        // Gebruik de functie voor verschillende tafels
+        toonTafel(5);
+        toonTafel(8);
+        toonTafel(12);
+    </script>
+
+</body>
+</html>
